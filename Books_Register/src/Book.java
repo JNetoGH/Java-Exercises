@@ -1,14 +1,14 @@
 public class Book {
 
     private String name = "default";
-    private String author = "default";
+    private Author author = null;
     private String publisher = "default";
     private String city = "default";
     private int publishingYear = 0;
     private int editionNumber = 0;
 
     public Book() {}
-    public Book(String name, String author, String publisher, String city, int publishingYear, int editionNumber) {
+    public Book(String name, Author author, String publisher, String city, int publishingYear, int editionNumber) {
         this.name = name;
         this.author = author;
         this.publisher = publisher;
@@ -29,8 +29,8 @@ public class Book {
 
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
-    public String getAuthor() {return author;}
-    public void setAuthor(String author) {this.author = author;}
+    public Author getAuthor() {return author;}
+    public void setAuthor(Author author) {this.author = author;}
     public String getPublisher() {return publisher;}
     public void setPublisher(String publisher) {this.publisher = publisher;}
     public String getCity() {return city;}
