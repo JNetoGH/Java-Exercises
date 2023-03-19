@@ -4,7 +4,6 @@ public class Person {
     protected int age = 0;
     protected String cityOfBirth = "default";
 
-
     public Person(String name, int age, String cityOfBirth) {
         this.name = name;
         this.age = age;

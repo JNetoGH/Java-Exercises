@@ -47,5 +47,4 @@ public class Book implements CSVGenerator {
     public int getEditionNumber() {return editionNumber;}
     public void setEditionNumber(int editionNumber) {this.editionNumber = editionNumber;}
 
-
 }

@@ -28,4 +28,3 @@ public class Author extends Person {
     public void setFormation(Formation formation) {this.formation = formation;}
 
 }
-
