@@ -1,4 +1,6 @@
-public class Book {
+import interfaces.CSVGenerator;
+
+public class Book implements CSVGenerator {
 
     private String name = "default";
     private Author author = null;
@@ -22,8 +24,13 @@ public class Book {
     }
 
     @Override
+    public String generateCSV() {
+        return String.format("%s;%s;%s;%s;%d", name, author.getName(), city, publisher, publishingYear);
+    }
+
+    @Override
     public String toString() {
-        return String.format("Book \nname: %s\nauthor: %s\npublisher: %s\ncity: %s\npublishing year: %d\nedition: %d",
+        return String.format("name: %s\nauthor: %s\npublisher: %s\ncity: %s\npublishing year: %d\nedition: %d",
                               name, author, publisher, city, publishingYear, editionNumber);
     }
 
@@ -39,5 +46,6 @@ public class Book {
     public void setPublishingYear(int publishingYear) {this.publishingYear = publishingYear;}
     public int getEditionNumber() {return editionNumber;}
     public void setEditionNumber(int editionNumber) {this.editionNumber = editionNumber;}
+
 
 }
